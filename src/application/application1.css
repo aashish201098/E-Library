@@ -1,0 +1,51 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* Navigation links */
+.navigation-button {
+    -fx-text-fill: white;
+    -fx-background-color:  #049276;
+    -fx-border-color:  #049276;
+    -fx-border-width: 1 0 0 0;
+}
+
+.navigation-button:visited {
+    -fx-text-fill: white;
+    -fx-border-style: none;
+    -fx-underline: false;
+}
+
+.navigation-button:hover {
+    -fx-underline: false;
+    -fx-text-fill: white;
+    -fx-background-color: #A72B28;
+}
+
+.navigation-button:focused {
+    -fx-underline: false;
+    -fx-background-color: #A72B28;
+}
+
+/* Button rules */
+/*.my-button {
+    -fx-text-fill: white;
+    -fx-background-color: #4286f4;
+    -fx-background-radius: 0;
+    -fx-pref-width: 120;
+    -fx-pref-height: 30;
+}*/
+
+.login {
+    -fx-background-image:url(images/login.jpg) ;
+}
+
+/* Library tiles 
+.library-tiles {
+    -fx-underline: false;
+    -fx-text-fill: black;
+    -fx-padding: 8;
+}
+
+.library-tiles:hover {
+    -fx-underline: false;
+    -fx-text-fill: white;
+    -fx-background-color: #6ba3ff;
+}*/

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addDetailsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="720.0" prefWidth="700.0">
+         <children>
+            <VBox prefHeight="538.0" prefWidth="546.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <StackPane prefHeight="47.0" prefWidth="600.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="569.0" text="Add Book Details" textFill="#a72420">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets top="30.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <HBox prefHeight="38.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="200.0" text="Title" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="titletf" prefHeight="29.0" prefWidth="392.0" promptText="Enter Title">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="200.0" text="Authors" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="authortf" prefHeight="29.0" prefWidth="392.0" promptText="Enter Author's name">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="200.0" text="Price" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="pricetf" prefHeight="29.0" prefWidth="392.0" promptText="Enter price">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="200.0" text="Book Cover Image" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="choosefiletf" onMouseClicked="#chooseFile" prefHeight="29.0" prefWidth="392.0" promptText="Choose Cover Photo">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="Image 1" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="img1tf" onMouseClicked="#chooseImg1" prefHeight="29.0" prefWidth="392.0" promptText="Choose Image1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="Image 2" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="img2tf" onMouseClicked="#chooseImg2" prefHeight="29.0" prefWidth="392.0" promptText="Choose Image 2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="408.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="Path Of File" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="pathtf" onMouseClicked="#choosePath" prefHeight="29.0" prefWidth="392.0" promptText="Enter Path">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="200.0" text="Description" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextArea fx:id="desctf" prefHeight="40.0" prefWidth="392.0" promptText="Enter the description about the book">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="426.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToHomePage" prefHeight="39.0" prefWidth="198.0" style="-fx-background-color: #a72420;" text="Go To Home Page" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="add" alignment="CENTER" mnemonicParsing="false" onAction="#addDetails" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #a72420;" text="ADD" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="446.0">
+                     <children>
+                        <Label fx:id="statuslb">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

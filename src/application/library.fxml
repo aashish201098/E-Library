@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.libraryController">
+   <children>
+      <HBox prefHeight="110.0" prefWidth="1400.0" style="-fx-background-color: #049276;">
+         <children>
+            <HBox prefHeight="110.0" prefWidth="466.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="110.0" prefWidth="135.0">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="application/images/user.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets right="-25.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="250.0">
+                     <children>
+                        <Label fx:id="myName" prefHeight="50.0" prefWidth="250.0" text="Saifullah" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="110.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="225.0" onMouseClicked="#homepage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="application/images/eLibrary.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="98.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="400.0">
+               <children>
+                  <TextField fx:id="searchtf" prefHeight="44.0" prefWidth="250.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="application/images/search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="110.0" prefWidth="120.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#help" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: white;" text="Help" textFill="#a72420">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: white;" text="Logout" textFill="#a72420">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutY="110.0" prefHeight="585.0" prefWidth="1400.0">
+         <children>
+            <VBox prefHeight="585.0" prefWidth="160.0" style="-fx-background-color: #049276;">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#library" prefHeight="115.0" prefWidth="160.0" styleClass="navigation-button" stylesheets="application/application1.css" text="Library">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#my_books" prefHeight="115.0" prefWidth="160.0" styleClass="navigation-button" stylesheets="application/application1.css" text="My_Books">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#profile" prefHeight="115.0" prefWidth="160.0" styleClass="navigation-button" stylesheets="application/application1.css" text="Profile">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="cartButton" mnemonicParsing="false" onAction="#cart" prefHeight="115.0" prefWidth="160.0" styleClass="navigation-button" stylesheets="application/application1.css" text="Cart">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="libraryVBox" prefHeight="585.0" prefWidth="880.0">
+               <children>
+                  <ListView fx:id="libraryListView" prefHeight="315.0" prefWidth="880.0" />
+                  <Label prefHeight="35.0" prefWidth="880.0" text="Description">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="880.0" />
+                  <HBox prefHeight="170.0" prefWidth="880.0">
+                     <children>
+                        <Label fx:id="descriptionLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="730.0" prefHeight="170.0" prefWidth="730.0" text="Description" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="coverImageView" fitHeight="170.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="readBtn" mnemonicParsing="false" onAction="#read" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: white;" text="Read" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="addToCartButton" mnemonicParsing="false" onAction="#addToCart" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: white;" text="Add To Cart" textFill="#a72420">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children></VBox>
+            <VBox fx:id="imagesVBox" alignment="CENTER" prefHeight="585.0" prefWidth="360.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fx:id="firstImageView" fitHeight="200.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin></ImageView>
+                  <ImageView fx:id="secondImageView" fitHeight="200.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></ImageView>
+               </children></VBox>
+         </children>
+      </HBox>
+      <HBox layoutY="694.0" prefHeight="155.0" prefWidth="1400.0" style="-fx-background-color: #1F6097;">
+         <children>
+            <VBox prefHeight="155.0" prefWidth="466.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="466.0" text="Office" textFill="#d8dcdd">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="Malaviya Nagar" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="Jaipur" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="155.0" prefWidth="466.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="466.0" text="Connect" textFill="#d8dcdd">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="Facebook" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="Twitter" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="155.0" prefWidth="466.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="466.0" text="Contacts" textFill="#d8dcdd">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="2016ucp1404@mnit.ac.in" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="2016ucp1369@mnit.ac.in" textFill="#049276">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
